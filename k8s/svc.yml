@@ -3,7 +3,8 @@ kind: Service
 metadata: 
   name: web-service
 spec:
-  app: web-app
+  selector:      
+    app: web-app
   ports:
     - protocol: TCP
       port: 80
