@@ -32,6 +32,8 @@ jobs:
       - name: Set up Kubeconfig
         run: |
           # This assumes you have your Kubeconfig as a GitHub Secret
+          # Create the .kube directory if it doesn't exist
+          mkdir -p ~/.kube
           echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
           chmod 600 ~/.kube/config
       - name: Deploy to Kubernetes
