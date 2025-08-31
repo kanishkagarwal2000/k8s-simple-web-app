@@ -27,7 +27,7 @@ jobs:
           context: ./web-app
           file: ./web-app/Dockerfile
           push: true
-          tags: kanishk099/k8s-simple-web-app:latest
+          tags: kanishk099/k8s-simple-web-app:latest,kanishk099/k8s-simple-web-app:${{ github.sha }}
 
       - name: Set up Kubeconfig
         run: |

@@ -19,7 +19,7 @@ spec:
         - name: web-app-container
 # This is where your Docker image will be store
 # You must create a Docker Hub account and replace this with your repo.
-          image: kanishk099/k8s-simple-web-app:latest
+          image: kanishk099/k8s-simple-web-app:${{ github.sha }}
           ports:
           - containerPort: 80
           resources:
